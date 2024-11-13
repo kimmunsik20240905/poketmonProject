@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
-import { Button, StCard, StCardWrap, StName } from '../styledComponents'
+import { Button, StCard, StCardWrap, StName } from '../styledComponents';
 import { useNavigate } from 'react-router-dom';
-import { PokemonContext } from '../context/PokemonContext';
+import { useDispatch } from 'react-redux'; 
+import { addPokemon } from '../redux/slices/pokemonSlice';
+
 
 const PoketmonCard = ({ name, image, type, id }) => {
-    const { addPokemon } = useContext(PokemonContext);
+    const dispatch = useDispatch();
+  
     const navigate = useNavigate();
 
     const handleDetailClick = () => {
@@ -19,7 +21,7 @@ const PoketmonCard = ({ name, image, type, id }) => {
                 <p>{type}</p>
                 <br />
             </StCard>
-            <Button onClick={() => addPokemon(id)}>
+            <Button onClick={() => dispatch(addPokemon(id))}>
                 추가
             </Button>
         </StCardWrap>

@@ -98,7 +98,15 @@ export const BackButton = styled.button`
     color:#fff;
     cursor : pointer;
 `;
-
+export const DetailButton = styled.button`
+    margin-left:10px;
+    background-color : #fd0103;
+    border-radius : 5px;
+    padding:5px 10px;
+    border-style:none;
+    color:#fff;
+    cursor : pointer;
+`;
 export const MainWrap = styled.div`
     display : flex;
     flex-wrap : wrap;

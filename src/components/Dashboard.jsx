@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
-import MOCK_DATA from '../mockData'
+import { useSelector, useDispatch } from 'react-redux';
+import MOCK_DATA from '../mockData';
 import { Button, CardWrap, ImgBall, StBallWrap, StCard, StCardWrap, Sth1, StName } from '../styledComponents';
 import monsterBallImg from '../assets/monsterBall.png';
-import { PokemonContext } from '../context/PokemonContext';
+import { removePokemon } from '../redux/slices/pokemonSlice';
 
 const Dashboard = () => {
-    const { selectedPokemonIds, removePokemon } = useContext(PokemonContext);
+    const selectedPokemonIds = useSelector((state) => state.pokemon.selectedPokemonIds);
+    const dispatch = useDispatch(); 
+
     const selectedPokemons = selectedPokemonIds.map(id =>
         MOCK_DATA.find(pokemon => pokemon.id === id)
     );
@@ -33,7 +35,7 @@ const Dashboard = () => {
                                 <p>{pokemon.types.join(', ')}</p>
                                 <br />
                             </StCard>
-                            <Button onClick={() => removePokemon(pokemon.id)}>
+                            <Button onClick={() => dispatch(removePokemon(pokemon.id))}>
                                 삭제
                             </Button>
                         </StCardWrap>

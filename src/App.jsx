@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import Router from './shared/Router'
-import { PokemonProvider } from './context/PokemonContext'
+import React from 'react';
+import { Provider } from 'react-redux';
+import './App.css';
+import Router from './shared/Router';
+import store from './redux/config/configStore';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';   
+
 
 function App() {
   return (
     <>
-      <PokemonProvider>
+      <Provider store={store}>
         <Router />
-      </PokemonProvider>
+      </Provider>
+      <ToastContainer />
     </>
   )
 }
