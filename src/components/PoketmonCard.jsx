@@ -12,7 +12,7 @@ const PoketmonCard = ({ name, image, type, id }) => {
     };
     return (
         <StCardWrap>
-            <StCard onClick={handleDetailClick}>
+            <StCard onClick={handleDetailClick}> 
                 <img src={image} alt={name} />
                 <StName>{name}</StName>
                 <br />
