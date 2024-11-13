@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, StCard, StCardWrap, StName } from '../styledComponents'
 import { useNavigate } from 'react-router-dom';
+import { PokemonContext } from '../context/PokemonContext';
 
-const PoketmonCard = ({ name, image, type, id, cardClick }) => {
+const PoketmonCard = ({ name, image, type, id }) => {
+    const { addPokemon } = useContext(PokemonContext);
     const navigate = useNavigate();
 
     const handleDetailClick = () => {
@@ -17,7 +19,7 @@ const PoketmonCard = ({ name, image, type, id, cardClick }) => {
                 <p>{type}</p>
                 <br />
             </StCard>
-            <Button onClick={() => cardClick(id)}>
+            <Button onClick={() => addPokemon(id)}>
                 추가
             </Button>
         </StCardWrap>
