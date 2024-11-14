@@ -1,9 +1,7 @@
 # Pokemon Dex 만들기 프로젝트
 
 ## 프로젝트 개요
-내가 원하는 포켓몬의 정보를 확인하고 대시보드에 추가/삭제 할 수 있는 기능을 React로 구현한 프로젝트로,  
-라우팅은 `React-router-dom`을 이용하였고, `props drilling`, `Context API`, `RTK` 세 가지 방식을 각각 사용하여 다른 브랜치에서 구현하였고,  
-이 프로젝트는 GitHub에 저장하고, Vercel로 배포하였음 (props drilling 브랜치 제외).
+내가 원하는 포켓몬의 정보를 확인하고 대시보드에 추가/삭제 할 수 있는 기능을 React로 구현한 프로젝트로, 라우팅은 `React-router-dom`을 이용하였고, `props drilling`, `Context API`, `RTK` 세 가지 방식을 각각 사용하여 다른 브랜치에서 구현하였고, 이 프로젝트는 GitHub에 저장하고, Vercel로 배포하였음 (props drilling 브랜치 제외).
 
 - **제작 기간:** 2024.12.9 ~ 2024.12.14
 
