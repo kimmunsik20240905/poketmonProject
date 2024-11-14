@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PoketmonCard from './PoketmonCard'
 import MOCK_DATA from '../mockData'
 import Dashboard from './Dashboard';
-import { CardWrap } from '../styledComponents';
+import { SectionWrap } from '../styledComponents';
 
 const PoketmonList = () => {
     const [selectedPokemonIds, setSelectedPokemonIds] = useState([]);
@@ -28,7 +28,7 @@ const PoketmonList = () => {
     return (
         <>
             <Dashboard selectedPokemonIds={selectedPokemonIds} handleDelete={handleDelete} />
-            <CardWrap>
+            <SectionWrap>
                 {MOCK_DATA.map(data => {
                     return (
                         <PoketmonCard
@@ -41,7 +41,7 @@ const PoketmonList = () => {
                         />
                     )
                 })}
-            </CardWrap>
+            </SectionWrap>
         </>
     )
 }

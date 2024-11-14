@@ -1,6 +1,6 @@
 import React from 'react'
 import MOCK_DATA from '../mockData'
-import { Button, CardWrap, ImgBall, StBallWrap, StCard, StCardWrap, Sth1, StName } from '../styledComponents';
+import { Button, CardWrap, ImgBall, StBallWrap, StCard, SectionWrap, Sth1, StName } from '../styledComponents';
 import monsterBallImg from '../assets/monsterBall.png';
 
 const Dashboard = ({ selectedPokemonIds, handleDelete }) => {
@@ -17,24 +17,23 @@ const Dashboard = ({ selectedPokemonIds, handleDelete }) => {
     const remainBalls = monsterBalls.slice(0, 6 - selectedPokemons.length);
 
     return (
-        <CardWrap>
+        <SectionWrap>
             <Sth1>나만의 포켓몬</Sth1>
-            <br/>
             {selectedPokemons.length > 0 ? (
                 <>
                     {selectedPokemons.map(pokemon => (
-                        <StCardWrap>
+                        <CardWrap>
                             <StCard key={pokemon.id}>
                                 <img src={pokemon.img_url} alt={pokemon.korean_name} />
                                 <StName>{pokemon.korean_name}</StName>
                                 <br />
                                 <p>{pokemon.types.join(', ')}</p>
                                 <br />
+                                <Button onClick={() => handleDelete(pokemon.id)}>
+                                    삭제
+                                </Button>
                             </StCard>
-                            <Button onClick={() => handleDelete(pokemon.id)}>
-                                삭제
-                            </Button>
-                        </StCardWrap>
+                        </CardWrap>
                     ))}
                     {remainBalls}
                 </>
@@ -43,7 +42,7 @@ const Dashboard = ({ selectedPokemonIds, handleDelete }) => {
                     {monsterBalls}
                 </>
             )}
-        </CardWrap>
+        </SectionWrap>
     )
 }
 
