@@ -20,18 +20,26 @@ export const StBallWrap = styled.div`
     padding:20px 20px;
     height:83px;
 `;
+export const SectionWrap = styled.div`
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : center;
+    padding:20px;
+    gap:20px;
+    max-width:1280px;
+    align-items: center;
+    background-color : #eee;
+    border-radius:10px;
+    margin-bottom:20px;
+`;
 
 export const CardWrap = styled.div`
     display : flex;
     flex-wrap : wrap;
     justify-content : center;
     gap:20px;
-    padding:20px;
     max-width:1280px;
     align-items: center;
-    background-color : #eee;
-    margin-bottom:20px;
-    border-radius:10px;
 `;
 
 export const Sth1 = styled.h1`
@@ -41,19 +49,21 @@ export const Sth1 = styled.h1`
     width:100%;
 `;
 
-export const StCardWrap = styled.div`
-    box-shadow : 2px 2px 5px rgba(0, 0, 0, 0.3);
-    width:186px;
-    position:relative;
-`;
-
 export const StCard = styled.div`
+    box-shadow : 2px 2px 5px rgba(0, 0, 0, 0.3);
     background-color : #fff;
     border-radius : 5px;
     border : 1px solid #ccc;
-    padding: 20px 20px 60px 20px;
+    padding: 40px 20px;
     box-sizing : border-box;
     width:186px;
+    transition: transform 0.3s ease; 
+    &:hover {
+        transform: translate(-3px, -3px);
+    }
+`;
+
+export const StClickWrap = styled.div`
     cursor:pointer;
 `;
 
@@ -67,12 +77,7 @@ export const Button = styled.button`
     padding:5px 10px;
     border-style:none;
     color:#fff;
-    cursor : pointer;
-    position: absolute;
-    width:46px;
-    left:93px;
-    bottom:30px;
-    margin-left:-23px;
+    cursor : pointer;    
 `;
 
 export const DetailWrap = styled.div`

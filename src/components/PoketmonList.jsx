@@ -1,13 +1,13 @@
 import PoketmonCard from './PoketmonCard';
 import MOCK_DATA from '../mockData';
 import Dashboard from './Dashboard';
-import { CardWrap } from '../styledComponents';
+import { SectionWrap } from '../styledComponents';
 
 const PoketmonList = () => {
     return (
         <>
             <Dashboard />
-            <CardWrap>
+            <SectionWrap>
                 {MOCK_DATA.map(data => {
                     return (
                         <PoketmonCard
@@ -19,7 +19,7 @@ const PoketmonList = () => {
                         />
                     )
                 })}
-            </CardWrap>
+            </SectionWrap>
         </>
     )
 }
