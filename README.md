@@ -28,7 +28,7 @@
   * 대시보드(`Dashboard.jsx`)는 컨텍스트를 가져온 `state`, `props`를 선택한 카드들에 구현하는 기능 수행
   * 상세화면(`PokemonDetail.jsx`)은 뒤로 가기 기능과 `useParams`으로 받아온 `id`를 통해 포켓몬 정보를 뿌려주는 기능 수행 
 
-- **RTK** ([링크](https://poketmon-project-redux.vercel.app/))
+- **redux-toolkits** ([링크](https://poketmon-project-redux.vercel.app/))
   * 라우팅 처리한 `Router`를 `App.jsx`에서 호출하고, `store`를 이용할 수 있도록 `Provider` 또한 호출
   * 리듀서(`pokemonSlice.jsx`)는 `store`에 연결할 `state`, `props`를 정의하는 기능 수행
   * 리스트(`PoketmonList.jsx`)는 대시보드와 카드의 레이아웃 기능 수행
